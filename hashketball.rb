@@ -294,27 +294,31 @@ end
 
 
 def winning_team
-home_sum = 0
-home_counter = 0
-while home_counter < game_hash[:home][:players].length do
-  home_sum +=  game_hash[:home][:players][home_counter][:points]
-  home_counter += 1
+  home_sum = 0
+  home_counter = 0
+  while home_counter < game_hash[:home][:players].length do
+    home_sum +=  game_hash[:home][:players][home_counter][:points]
+    home_counter += 1
+  end
+
+  away_sum = 0
+  away_counter = 0
+  while away_counter < game_hash[:away][:players].length do
+     away_sum += game_hash[:away][:players][away_counter][:points]
+     away_counter += 1
+  end
+  both_teams_points_array = []
+  both_teams_points_array << home_sum
+  both_teams_points_array << away_sum
+  result = both_teams_points_array.max
+
+  if result == home_sum
+    winner = game_hash[:home][:team_name]
+  else
+    winner = game_hash[:away][:team_name]
+  end
 end
 
-away_sum = 0
-away_counter = 0
-while away_counter < game_hash[:away][:players].length do
-   away_sum += game_hash[:away][:players][away_counter][:points]
-   away_counter += 1
-end
-both_teams_points_array = []
-both_teams_points_array << home_sum
-both_teams_points_array << away_sum
-result = both_teams_points_array.max
+def player_with_longest_name 
 
-if result == home_sum
-  winner = game_hash[:home][:team_name]
-else
-  winner = game_hash[:away][:team_name]
-end
 end
