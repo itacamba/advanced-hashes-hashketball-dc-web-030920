@@ -357,8 +357,6 @@ def long_name_steals_a_ton?
   while away_steals_counter < away_players.length do
     if max_steal == away_players[away_steals_counter][:steals]
      return true
-    else
-      return false
     end
     away_steals_counter += 1
   end
