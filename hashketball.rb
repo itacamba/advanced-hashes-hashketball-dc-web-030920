@@ -351,7 +351,7 @@ def long_name_steals_a_ton?
   end
   max_steal = all_steals.max
 
-  if player_with_longest_name ==  max_steal
+  if player_with_longest_name ==  all_steals.max
      result = true
    else
      result = false
