@@ -320,7 +320,7 @@ def winning_team
 end
 
 def player_with_longest_name
-  all_names = [] 
+  all_names = []
   home_counter = 0
   while home_counter < game_hash[:home][:players].length do
     all_names <<  game_hash[:home][:players][home_counter][:player_name]
