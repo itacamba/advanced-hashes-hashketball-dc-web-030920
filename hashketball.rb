@@ -311,5 +311,5 @@ both_teams_points_array = []
 both_teams_points_array << home_sum
 both_teams_points_array << away_sum
 result = both_teams_points_array.max
-result
+home_sum
 end
