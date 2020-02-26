@@ -333,4 +333,6 @@ def player_with_longest_name
     all_names << game_hash[:away][:players][away_counter][:player_name]
      away_counter += 1
   end
+
+  all_names
 end
