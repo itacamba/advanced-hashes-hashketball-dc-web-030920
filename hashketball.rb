@@ -334,5 +334,5 @@ def player_with_longest_name
      away_counter += 1
   end
 
-  all_names
+  all_names.max
 end
