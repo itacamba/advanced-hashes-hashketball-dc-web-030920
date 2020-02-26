@@ -311,5 +311,10 @@ both_teams_points_array = []
 both_teams_points_array << home_sum
 both_teams_points_array << away_sum
 result = both_teams_points_array.max
-away_sum
+
+if result == home_sum
+  winner = game_hash[:home][:team_name]
+else
+  winner = game_hash[:away][:team_name]
+end
 end
