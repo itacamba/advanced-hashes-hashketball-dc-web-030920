@@ -362,5 +362,5 @@ def long_name_steals_a_ton?
     end
     away_steals_counter += 1
   end
-   all_steals
+  result
 end
