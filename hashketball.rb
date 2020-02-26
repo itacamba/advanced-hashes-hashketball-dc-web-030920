@@ -339,7 +339,8 @@ end
 def long_name_steals_a_ton?
   all_steals = []
   home_counter = 0
-  while home_counter < game_hash[:home][:players].length do
+  home_players = game_hash[:home][:players]
+  while home_counter < home_players.length do
     all_steals <<  game_hash[:home][:players][home_counter][:steals]
     home_counter += 1
   end
@@ -351,10 +352,14 @@ def long_name_steals_a_ton?
   end
   max_steal = all_steals.max
 
-  if player_with_longest_name ==  all_steals.max
-     result = true
-   else
-     result = false
+  away_steals_counter = 0
+  while away_steals_counter < home_players.length do
+    if max_steal == game_hash[:away][:players][away_steals_counter][:steals]
+      result = true
+    else
+      result = false
+    end
+    away_steals_counter += 1
   end
    result
 end
