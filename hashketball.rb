@@ -354,7 +354,7 @@ def long_name_steals_a_ton?
   max_steal = all_steals.max
 
   away_steals_counter = 0
-  while away_steals_counter < home_players.length do
+  while away_steals_counter < away_players.length do
     if max_steal == game_hash[:away][:players][away_steals_counter][:steals]
       result = true
     else
