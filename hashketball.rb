@@ -346,8 +346,9 @@ def long_name_steals_a_ton?
   end
 
   away_counter = 0
-  while away_counter < game_hash[:away][:players].length do
-    all_steals << game_hash[:away][:players][away_counter][:steals]
+  away_players = game_hash[:away][:players].
+  while away_counter < away_players.length do
+    all_steals << away_players[away_counter][:steals]
      away_counter += 1
   end
   max_steal = all_steals.max
