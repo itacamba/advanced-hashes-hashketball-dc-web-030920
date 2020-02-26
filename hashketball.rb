@@ -346,7 +346,7 @@ def long_name_steals_a_ton?
   end
 
   away_counter = 0
-  away_players = game_hash[:away][:players].
+  away_players = game_hash[:away][:players]
   while away_counter < away_players.length do
     all_steals << away_players[away_counter][:steals]
      away_counter += 1
